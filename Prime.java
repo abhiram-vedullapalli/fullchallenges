@@ -19,8 +19,9 @@ public class Prime {
 	System.out.println(Arrays.toString(num));
 	ArrayList<Integer> not = divisibility(num,limit,a,b);
 	System.out.println(not);
-	ArrayList<Integer> primenumbers = prime(not);
-	System.out.println(primenumbers);
+	ArrayList<Integer> pNum = primeNumbers(not);
+	System.out.println("Prime Numbers are : " );	
+	System.out.println(pNum);
 	}
 	
 		public static ArrayList<Integer> divisibility(int arr[], int limit , int a , int b) {
@@ -34,7 +35,7 @@ public class Prime {
 		}
 		return notDiv;
 	}
-		public static ArrayList<Integer> prime(ArrayList<Integer> p){
+		public static ArrayList<Integer> primeNumbers(ArrayList<Integer> p){
 			ArrayList<Integer> prime = new ArrayList<Integer>(p.size());
 			
 			for(int i = 0 ; i < p.size() ; i++) {
